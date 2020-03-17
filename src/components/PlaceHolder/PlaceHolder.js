@@ -30,7 +30,7 @@ const PlaceHolder = () => {
 				<td>
 					<div
 						className="placeholder"
-						style={{ width: `${getRandomNum(100, 150)}px` }}
+						style={{ width: `${getRandomNum(50, 100)}px` }}
 					></div>
 				</td>
 				<td>

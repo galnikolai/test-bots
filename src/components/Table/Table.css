@@ -10,9 +10,9 @@
 
 .cross {
   position: absolute;
-  width: 30px;
-  top: 12px;
-  right: 12px;
+  width: 26px;
+  top: 11px;
+  right: 11px;
   fill: #C0C0C2;
   z-index: 2;
   cursor: pointer;
@@ -20,13 +20,13 @@
 
 header > img {
   position: absolute;
-  right: 24px;
-  top: 78px;
+  right: 22px;
+  top: 70px;
   cursor: pointer;
 } 
 
 header {
-  height: 80px;
+  height: 85px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -38,11 +38,11 @@ header {
   border-radius: 4px;
 }
 h1 {
-  margin: 4px 0 0 12px;
+  margin: 0 0 0 12px;
   line-height: 0.8;
   font-size: 22px;
   font-family: 'Apercu';
-  font-weight: normal;
+  font-weight: bold;
 }
   
 input {
@@ -56,8 +56,8 @@ input {
   font-family: 'Apercu';
   font-weight: normal;
   box-sizing: border-box;
-  padding: 12px 18px 12px 36px;
-  margin: 20px 0;
+  padding: 12px 18px 12px 38px;
+  margin: 16px 0 18px 0;
   background: url('/images/search.svg') no-repeat;
   background-position: 2.5% 50%;
   transition: 150ms;
@@ -71,9 +71,9 @@ input:focus {
 }
 
 main {
-  height: 370px;
+  height: 326px;
+  padding: 0 5px 20px 5px;
   overflow-y: auto;
-  padding: 0 5px;
   border-bottom: 1px solid transparent;
 }
   
@@ -92,13 +92,19 @@ th {
   text-align: left;
   font-size: 14px;
   color: #FFFFFF;
-  font-weight: normal;
-  padding: 7.5px 15px;
+  font-weight: bold;
+  padding: 5px 15px;
   background-color: #36363C;
+  min-width: 165px;
 }
   
 th:first-child {
   padding-left: 25px;
+  min-width: 40px;
+}
+
+th:last-child {
+  min-width: 30px;
 }
 
 tbody tr {
@@ -110,6 +116,11 @@ td {
   color: #C0C0C2;
   text-align: left;
   padding: 7.5px 15px;
+  box-sizing: border-box;
+  min-width: 120px;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 tbody tr:hover > td{
@@ -126,6 +137,7 @@ tbody tr:hover > td:nth-child(2){
 td:first-child {
   border-radius: 4px 0px 0px 4px;
   padding-left: 25px;
+  min-width: 40px;
 }
   
 td:nth-child(2) {
@@ -134,13 +146,15 @@ td:nth-child(2) {
   
 td:last-child {
   border-radius: 0px 4px 4px 0px;
+  min-width: 30px;
 }
 
 .footer-blur {
   position: absolute;
+  pointer-events: none;
   border-radius: 4px;
   bottom: 0;
-  width: 97%;
-  height: 50px;
+  width: 100%;
+  height: 60px;
   background: linear-gradient(179.97deg, rgba(54, 54, 60, 0) -23.07%, #36363C 70.17%, #36363C 92.17%);
 }

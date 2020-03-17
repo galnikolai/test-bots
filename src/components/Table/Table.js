@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { connect } from 'react-redux'
 import './Table.css'
 import Error from '../Error'
@@ -9,6 +9,8 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 	const [filteredArray, setFilteredArray] = useState([])
 	const [inputValue, setInputValue] = useState('')
 
+	const inputRef = useRef()
+
 	useEffect(() => {
 		fetchBots()
 	}, [])
@@ -16,6 +18,18 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 	useEffect(() => {
 		bots.length !== 0 && !error && setFilteredArray(bots)
 	}, [bots, error])
+
+	const timestampToDate = timestamp => {
+		var date = new Date()
+		date.setTime(timestamp)
+		return (
+			('0' + date.getDate()).slice(-2) +
+			'.' +
+			('0' + (date.getMonth() + 1)).slice(-2) +
+			'.' +
+			date.getFullYear()
+		)
+	}
 
 	const filterArray = event => {
 		setInputValue(event.target.value)
@@ -26,6 +40,7 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 	}
 
 	const showBotsTable = () => {
+		inputRef.current.focus()
 		setFilteredArray(bots)
 		setInputValue('')
 	}
@@ -37,7 +52,7 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 				<tr key={name} onClick={() => window.open(link)}>
 					<td>{id}</td>
 					<td>{name}</td>
-					<td>{reg}</td>
+					<td>{timestampToDate(reg)}</td>
 					<td>{level}</td>
 				</tr>
 			)
@@ -64,8 +79,10 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 			<header>
 				<h1>List of bots</h1>
 				<input
+					ref={inputRef}
 					disabled={error}
 					name="search"
+					type="text"
 					onChange={event => filterArray(event)}
 					placeholder="Searching for a bot..."
 					value={inputValue}
