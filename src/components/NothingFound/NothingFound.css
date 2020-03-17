@@ -1,0 +1,26 @@
+.nothing-found {
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'Apercu';
+}
+  
+span {
+  color: #B0A2FC;
+  transition: 250ms;
+  cursor: pointer;
+  font-size: 14px;
+}
+  
+span:hover {
+  opacity: 0.5;
+}
+  
+p {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+}
+  
+h2 {
+  color: #FFFFFF;
+  font-size: 18px;
+}
