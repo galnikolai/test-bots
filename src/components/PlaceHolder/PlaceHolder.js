@@ -6,13 +6,13 @@ const PlaceHolder = () => {
 		return Math.floor(Math.random() * (max - min) + min)
 	}
 
-	const renderHolderTable = () => {
+	const renderHolderArray = () => {
 		const arr = []
 		for (let i = 0; i < 50; i++) arr.push(i)
 		return arr
 	}
 
-	return renderHolderTable().map(i => {
+	return renderHolderArray().map(i => {
 		return (
 			<tr key={i}>
 				<td>

@@ -61,7 +61,7 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 	const areProblems = () => {
 		if (error) {
 			return <Error fetchBots={fetchBots} />
-		} else if (filteredArray.length === 0) {
+		} else if (filteredArray.length === 0 && !loading) {
 			return (
 				<NothingFound
 					showBotsTable={showBotsTable}

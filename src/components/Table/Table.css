@@ -56,17 +56,17 @@ input {
   font-family: 'Apercu';
   font-weight: normal;
   box-sizing: border-box;
-  padding: 12px 18px 12px 38px;
+  padding: 16px 18px 12px 35px;
   margin: 16px 0 18px 0;
   background: url('/images/search.svg') no-repeat;
-  background-position: 2.5% 50%;
+  background-position: 2.4% 58%;
   transition: 150ms;
 }
   
 input:focus {
   outline: none;
   background: url('/images/search.svg') no-repeat rgba(255, 255, 255, 0.08);
-  background-position: 2.5% 50%;
+  background-position: 2.4% 58%;
   color: #FFFFFF
 }
 
@@ -93,14 +93,21 @@ th {
   font-size: 14px;
   color: #FFFFFF;
   font-weight: bold;
-  padding: 5px 15px;
+  padding: 5px 22px;
   background-color: #36363C;
-  min-width: 165px;
+  min-width: 125px;
+  max-width: 125px;
 }
   
 th:first-child {
   padding-left: 25px;
-  min-width: 40px;
+  min-width: 30px;
+  max-width: 30px;
+}
+
+th:nth-child(2) {
+  min-width: 170px;
+  max-width: 170px;
 }
 
 th:last-child {
@@ -115,10 +122,10 @@ tbody tr {
 td {
   color: #C0C0C2;
   text-align: left;
-  padding: 7.5px 15px;
+  padding: 3px 22px 0 22px;
   box-sizing: border-box;
-  min-width: 120px;
-  max-width: 160px;
+  min-width: 125px;
+  max-width: 125px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -136,12 +143,15 @@ tbody tr:hover > td:nth-child(2){
   
 td:first-child {
   border-radius: 4px 0px 0px 4px;
-  padding-left: 25px;
-  min-width: 40px;
+  padding-left: 26px;
+  min-width: 30px;
+  max-width: 30px;
 }
   
 td:nth-child(2) {
   color:  #B0A2FC;
+  min-width: 170px;
+  max-width: 170px;
 }
   
 td:last-child {
@@ -155,6 +165,6 @@ td:last-child {
   border-radius: 4px;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 40px;
   background: linear-gradient(179.97deg, rgba(54, 54, 60, 0) -23.07%, #36363C 70.17%, #36363C 92.17%);
 }
