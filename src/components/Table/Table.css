@@ -126,8 +126,6 @@ td {
   box-sizing: border-box;
   min-width: 125px;
   max-width: 125px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 tbody tr:hover > td{
@@ -152,6 +150,8 @@ td:nth-child(2) {
   color:  #B0A2FC;
   min-width: 170px;
   max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
   
 td:last-child {
