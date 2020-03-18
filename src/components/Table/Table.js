@@ -20,7 +20,7 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 	}, [bots, error])
 
 	const timestampToDate = timestamp => {
-		var date = new Date()
+		const date = new Date()
 		date.setTime(timestamp)
 		return (
 			('0' + date.getDate()).slice(-2) +
