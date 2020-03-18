@@ -61,7 +61,7 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 	const areProblems = () => {
 		if (error) {
 			return <Error fetchBots={fetchBots} />
-		} else if (filteredArray.length === 0 && !loading) {
+		} else if (filteredArray.length === 0) {
 			return (
 				<NothingFound
 					showBotsTable={showBotsTable}
@@ -106,7 +106,7 @@ const Table = ({ bots, fetchBots, loading, error }) => {
 					</thead>
 					<tbody>{loading ? <PlaceHolder /> : tableComponent}</tbody>
 				</table>
-				{areProblems()}
+				{!loading && areProblems()}
 			</main>
 			<div className="footer-blur"></div>
 		</div>

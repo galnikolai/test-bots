@@ -36,8 +36,10 @@ export const bots = {
 				await dispatch.bots.data(response.data)
 				dispatch.bots.loading(false)
 			} catch (error) {
-				dispatch.bots.loading(false)
-				dispatch.bots.error(true)
+				setTimeout(() => {
+					dispatch.bots.loading(false)
+					dispatch.bots.error(true)
+				}, 1000)
 			}
 		},
 	}),
